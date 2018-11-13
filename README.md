@@ -1,8 +1,6 @@
 # Blockchain Web service
 
-Blockchain has the potential to change the way that the world approaches data. Develop Blockchain skills by understanding the data model behind Blockchain by developing your own simplified private blockchain.
-
-This project implements a REST API to a simple web service that creates and retrieves blocks in a block chain.
+This project implements a simple web service for creating and retrieving blocks in a blockchain using a REST API.
 
 ## Getting Started
 
@@ -22,8 +20,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Running the project
 
-- Change to the project folder
-- Call the entry point:
+Change to the project folder and call the entry point:
 
 ```
 node index.js
@@ -33,11 +30,11 @@ It listens on port 8000 by default.
 
 ### API endpoints
 
-With the server running, we can call the endpoints:
+With the server running, use a tool like _CURL_, _Insomnia_ or _Postman_ to access the endpoints:
 
 - **GET http://localhost:8000/**
 
-  Returns API name and version
+  Returns API name and version:
 
   ```
   {
@@ -48,15 +45,15 @@ With the server running, we can call the endpoints:
 
 - **GET http://localhost:8000/block/n**
 
-  Returns the block with height n
+  Returns the block with height n:
 
   ```
   {
-  "hash": "9d774d3229980d8145612666925f099d065dfad7b8193e69647cc9f01a0ef2f9",
-  "height": 1,
-  "body": "New block text",
-  "time": "1542117373",
-  "previousBlockHash": "0078bb1990ecc52dcb76ca3d458a6088d8cc1fa0f6e6f6f0da85c99e024317f0"
+    "hash": "9d774d3229980d8145612666925f099d065dfad7b8193e69647cc9f01a0ef2f9",
+    "height": 1,
+    "body": "New block text",
+    "time": "1542117373",
+    "previousBlockHash": "0078bb1990ecc52dcb76ca3d458a6088d8cc1fa0f6e6f6f0da85c99e024317f0"
   }
   ```
 
@@ -64,7 +61,7 @@ With the server running, we can call the endpoints:
 
   ```
   {
-      "error": "block not found"
+    "error": "block not found"
   }
 
   ```
@@ -75,7 +72,7 @@ With the server running, we can call the endpoints:
 
   ```
   {
-      "body": "New block text"
+    "body": "New block text"
   }
   ```
 
@@ -83,11 +80,11 @@ With the server running, we can call the endpoints:
 
   ```
   {
-  "hash": "9d774d3229980d8145612666925f099d065dfad7b8193e69647cc9f01a0ef2f9",
-  "height": 1,
-  "body": "New block text",
-  "time": "1542117373",
-  "previousBlockHash": "0078bb1990ecc52dcb76ca3d458a6088d8cc1fa0f6e6f6f0da85c99e024317f0"
+    "hash": "9d774d3229980d8145612666925f099d065dfad7b8193e69647cc9f01a0ef2f9",
+    "height": 1,
+    "body": "New block text",
+    "time": "1542117373",
+    "previousBlockHash": "0078bb1990ecc52dcb76ca3d458a6088d8cc1fa0f6e6f6f0da85c99e024317f0"
   }
   ```
 
@@ -95,7 +92,7 @@ With the server running, we can call the endpoints:
 
   ```
   {
-  "error": "invalid block body"
+    "error": "invalid block body"
   }
   ```
 
@@ -105,13 +102,13 @@ With the server running, we can call the endpoints:
 
   ```
   {
-  "height": 5
+    "height": 5
   }
   ```
 
 ### Notes
 
-- The level blocks database is created automatically on first use. Will create a folder _chaindata_
+- The _level_ database is created automatically on first use. Will create a folder _chaindata_
   at the project folder level.
 
 - To reset the database, drop the _chaindata_ folder and restart the node service.
