@@ -64,8 +64,8 @@ With the server running, we can call the endpoints:
 
   ```
   {
-    "error": "block not found"
-    }
+      "error": "block not found"
+  }
 
   ```
 
